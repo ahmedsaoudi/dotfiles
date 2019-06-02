@@ -117,7 +117,10 @@ set fillchars+=stl:\ ,stlnc:\
 " So that airline symbols are correctly displayed
 let g:airline_powerline_fonts=1
 
-" Update the swap file everytime a 1000 characters are typed ...
+" no swap files
+set noswapfile
+
+"Update the swap file everytime a 1000 characters are typed ...
 set updatecount=1000
 
 " ... or every 5000ms
