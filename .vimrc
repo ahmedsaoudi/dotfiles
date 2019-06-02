@@ -60,48 +60,6 @@ function MyDiff()
 	silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
-" this function gets the pathname of the open file and extracts an
-" extension-less base name.
-" exp. : filename.ext becomes filename
-function! GetFileBaseName()
-	let baseName = matchstr(expand('%:t'), '\([^.]*\)')
-	return baseName
-endfunction
-
-" this function allows to call the PANDOC converter from Vim easily.
-function! ConvertPandoc(toFormat)
-	let format = a:toFormat
-	if a:toFormat ==? "mediawiki"
-		let ext = "mediawiki.txt"
-	elseif a:toFormat =~? 'markdown_\([.]*\)'
-		let flavor = strpart(a:toFormat, 9)
-		let ext = flavor . ".markdown"
-	elseif a:toFormat ==? "epub3"
-		let ext = "epub"
-	elseif a:toFormat ==? "plain"
-		let ext = "txt"
-	elseif a:toFormat ==? "html5"
-		let ext = "html5.html"
-	elseif a:toFormat ==? "pdf"
-		let format = "latex"
-		let ext = "pdf"
-	else
-		let ext = a:toFormat
-	endif
-	let output = GetFileBaseName() . "." . ext
-	execute "!cd '" . expand('%:p:h') . "' && pandoc -t " . format . " -o " . output expand('%:t')
-endfunction
-
-" this function toggles between full screen mode (no menubar, no scrollbars)
-" and normal mode (with vertical scroll bar and menubar)
-function! FullScreenMode()
-	if &guioptions == "ic"
-		let &guioptions="gtmrLti"
-	else
-		let &guioptions = "ic"
-	endif
-endfunction
-
 " Allows the use of smartcase in search and subtitutions
 " To enforce case sensetivity use: set smartcase!
 " set ignorecase
@@ -159,24 +117,14 @@ set fillchars+=stl:\ ,stlnc:\
 " So that airline symbols are correctly displayed
 let g:airline_powerline_fonts=1
 
-" Start Pathogene
-"execute pathogen#infect()
+" Update the swap file everytime a 1000 characters are typed ...
+set updatecount=1000
 
-" Set 'Pandoc' command to call ConvertPandoc function
-" Pandoc is text converter
-"command -nargs=1 Pandoc call ConvertPandoc(<q-args>)
-
-" Update the swap file everytime a character is typed ...
-" set updatecount=1
-
-" ... or every 500ms
-set updatetime=500
+" ... or every 5000ms
+set updatetime=5000
 
 " NO BELLS!!!
 set visualbell
-
-" Start VIM in 'full screen' mode
-" execute FullScreenMode()
 
 "KEYS MAPPINGS
 """"""""""""""
@@ -202,8 +150,8 @@ map <F2> <ESC>:nohls<ENTER>
 " Enable some indenting options
 set smartindent
 set expandtab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " adds '$' symbole whenever obsession is active
 let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', '''')}', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
@@ -216,7 +164,7 @@ let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', ''''
 " set hidden
 
 " opens a new buffer
-nmap <leader>t :enew<CR>
+nmap <leader>n :enew<CR>
 
 " goes to next buffer
 nmap <leader>l :bn<CR>
@@ -228,7 +176,7 @@ nmap <leader>h :bp<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
 
 " Toggle NERDTree tabs 
-nmap <leader>n :NERDTreeTabsToggle<CR>
+nmap <leader>t :NERDTreeTabsToggle<CR>
 
 " nnoremap <leader>k :YcmCompleter GoTo<CR>
 " nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
@@ -243,13 +191,10 @@ nmap <leader>n :NERDTreeTabsToggle<CR>
 " To add a background for the CtrlP result prompt
 hi cursorline cterm=none ctermbg=99 ctermfg=black guibg=99 guifg=black
 set nocursorline
-" Always start CtrlP in Buffer mode
-let g:ctrlp_cmd = 'CtrlPBuffer'
+" Always start CtrlP in Mixed mode
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_by_filename = 1
 
 " Show the current file full path
 let g:airline_section_c = '%f'
 let g:airline_theme = 'dark'
-
-" THIS IS JUST SO I CAN RESTART GUNICORN FROM VIM
-nnoremap <leader>g :!sudo systemctl restart gunicorn<CR><CR>
