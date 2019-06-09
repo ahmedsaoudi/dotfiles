@@ -33,7 +33,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 " THEMES
 " ------
-Plugin 'arcticicestudio/nord-vim'
+Plugin 'cocopon/iceberg.vim'
 Plugin 'bcicen/vim-vice'
 
 " PLUGINS I NO LONGER NEED
@@ -84,7 +84,7 @@ set smartcase
 let mapleader = ","
 
 " Set color scheme to 'VICE'
-colorscheme vice
+colorscheme iceberg
 
 " 256 colors terminals
 set t_Co=256
@@ -207,8 +207,8 @@ nmap <leader>t :NERDTreeTabsToggle<CR>
 " let g:ycm_complete_in_strings = 1 " Completion in string
 
 " To add a background for the CtrlP result prompt
-hi cursorline cterm=none ctermbg=99 ctermfg=black guibg=99 guifg=black
-set nocursorline
+" hi cursorline cterm=none ctermbg=99 ctermfg=black 
+set cursorline
 
 " Always start CtrlP in Mixed (buffer + file) mode
 let g:ctrlp_cmd = 'CtrlPMixed'
