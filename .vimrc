@@ -4,32 +4,47 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-" list of plugins
+" LIST OF PLUGINS
+" ===============
+
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'scrooloose/nerdTree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
 " handles (), {} and the likes
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'jistr/vim-nerdtree-tabs'
-" " handles html tags
+
+" handles html tags
 Plugin 'alvan/vim-closetag'
-Plugin 'skammer/vim-css-color'
+ 
 " surrounds text with '' and the likes
 " using shortcuts
 Plugin 'tpope/vim-surround'
+Plugin 'skammer/vim-css-color'
+ 
+" shows indentation levels
+" (the vertical lines on the 
+" left of the screen)
 Plugin 'yggdroot/indentline'
-Plugin 'bcicen/vim-vice'
 Plugin 'tpope/vim-obsession'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
+
+" THEMES
+" ------
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'bcicen/vim-vice'
+
 " PLUGINS I NO LONGER NEED
+" ========================
 " Plugin 'ervandew/supertab'
 " Plugin 'bling/vim-bufferline'
 " Plugin 'edsono/vim-matchit' (no longer available)
 " Plugin 'Valloric/YouCompleteMe'
+" Plugin 'vim-pandoc/vim-pandoc'
+" Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -243,8 +258,8 @@ nmap <leader>n :NERDTreeTabsToggle<CR>
 " To add a background for the CtrlP result prompt
 hi cursorline cterm=none ctermbg=99 ctermfg=black guibg=99 guifg=black
 set nocursorline
-" Always start CtrlP in Buffer mode
-let g:ctrlp_cmd = 'CtrlPBuffer'
+" Always start CtrlP in Mixed (buffer + file) mode
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_by_filename = 1
 
 " Show the current file full path
