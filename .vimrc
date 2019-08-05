@@ -30,6 +30,7 @@ Plugin 'yggdroot/indentline'
 Plugin 'tpope/vim-obsession'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'lepture/vim-jinja'
 
 " THEMES
 " ------
@@ -211,7 +212,7 @@ nmap <leader>t :NERDTreeTabsToggle<CR>
 set cursorline
 
 " Always start CtrlP in Mixed (buffer + file) mode
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_by_filename = 1
 
 " Show the current file full path
