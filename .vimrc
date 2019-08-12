@@ -32,6 +32,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'lepture/vim-jinja'
 
+" needed to show git branch on airline
+Plugin 'tpope/vim-fugitive'
+
 " THEMES
 " ------
 Plugin 'cocopon/iceberg.vim'
@@ -45,7 +48,6 @@ Plugin 'bcicen/vim-vice'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'vim-pandoc/vim-pandoc'
 " Plugin 'jistr/vim-nerdtree-tabs'
-" Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -132,6 +134,8 @@ set fillchars+=stl:\ ,stlnc:\
 
 " So that airline symbols are correctly displayed
 let g:airline_powerline_fonts=1
+
+let g:airline#extensions#branch#enabled=1
 
 " no swap files
 set noswapfile
