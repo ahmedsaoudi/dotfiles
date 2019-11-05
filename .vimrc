@@ -22,6 +22,9 @@ Plugin 'alvan/vim-closetag'
 " using shortcuts
 Plugin 'tpope/vim-surround'
 Plugin 'skammer/vim-css-color'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'psf/black'
  
 " shows indentation levels
 " (the vertical lines on the 
@@ -222,3 +225,13 @@ let g:ctrlp_by_filename = 1
 " Show the current file full path
 let g:airline_section_c = '%f'
 let g:airline_theme = 'dark'
+
+" for youcompleteme
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" syntastic suppress messages
+let g:syntastic_quiet_messages = { 'regex': ['missing-docstring'] }
+
+" for the black plugin
+let g:black_virtualenv="~/virtualenvs/vim_black"
