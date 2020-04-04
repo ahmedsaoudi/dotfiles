@@ -8,7 +8,6 @@ call vundle#begin()
 " ===============
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdTree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -45,6 +44,7 @@ Plugin 'bcicen/vim-vice'
 
 " PLUGINS I NO LONGER NEED
 " ========================
+" Plugin 'scrooloose/nerdTree'
 " Plugin 'ervandew/supertab'
 " Plugin 'bling/vim-bufferline'
 " Plugin 'edsono/vim-matchit' (no longer available)
@@ -144,10 +144,10 @@ let g:airline#extensions#branch#enabled=1
 set noswapfile
 
 "Update the swap file everytime a 1000 characters are typed ...
-set updatecount=1000
+" set updatecount=1000
 
 " ... or every 5000ms
-set updatetime=5000
+" set updatetime=5000
 
 " NO BELLS!!!
 set visualbell
@@ -202,8 +202,12 @@ nmap <leader>h :bp<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
 
 " Toggle NERDTree tabs 
-nmap <leader>t :NERDTreeTabsToggle<CR>
+" nmap <leader>t :NERDTreeTabsToggle<CR>
 
+" for youcompleteme
+"
+" let g:ycm_autoclose_preview_window_after_completion=1
+" map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " nnoremap <leader>k :YcmCompleter GoTo<CR>
 " nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
 " nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
@@ -226,9 +230,6 @@ let g:ctrlp_by_filename = 1
 let g:airline_section_c = '%f'
 let g:airline_theme = 'dark'
 
-" for youcompleteme
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " syntastic suppress messages
 let g:syntastic_quiet_messages = { 'regex': ['missing-docstring'] }
