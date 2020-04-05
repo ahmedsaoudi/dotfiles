@@ -28,3 +28,9 @@ To do so, we create this symlink:
 ```
 sudo ln -s ~/dotfiles/rofi/config ~/.config/rofi/config
 ```
+
+## bash_profile
+This sets some basic bash profile settings:
+```bash
+sudo ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+```
