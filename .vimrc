@@ -62,7 +62,9 @@ filetype plugin indent on
 
 " Allows the use of smartcase in search and subtitutions
 " To enforce case sensetivity use: set smartcase!
-" set ignorecase
+" IT'S IMPORTANT TO LEAVE IGNORECASE
+" SO THAT SMARTCASE BEHAVES AS EXPOECTED
+set ignorecase
 set smartcase
 
 set cursorline
@@ -93,6 +95,9 @@ set linebreak
 
 " Disable max width for text
 set textwidth=88
+
+" Shows text width column
+set colorcolumn=88
 
 " Set encoding to UTF-8
 set fileencodings=utf-8
@@ -153,6 +158,8 @@ nmap <leader>h :bp<CR>
 
 " closes current buffer and opens previous one
 nmap <leader>q :bp <BAR> bd #<CR>
+
+map <F9> :Black<CR>
 
 " Toggle NERDTree tabs 
 " nmap <leader>t :NERDTreeTabsToggle<CR>
