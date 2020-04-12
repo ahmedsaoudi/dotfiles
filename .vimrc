@@ -159,7 +159,10 @@ nmap <leader>h :bp<CR>
 " closes current buffer and opens previous one
 nmap <leader>q :bp <BAR> bd #<CR>
 
+" --( python specific )------
+
 map <F9> :Black<CR>
+map <F8> :SyntasticCheck<CR>
 
 " Toggle NERDTree tabs 
 " nmap <leader>t :NERDTreeTabsToggle<CR>
@@ -227,8 +230,24 @@ let g:ctrlp_by_filename = 1
 " syntastic
 " ---------
 
+" use the pylint checker
+" pylint needs to be installed first:
+" sudo apt install pylint
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_args = "--rcfile=" . $HOME . "/.pylintrc"
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+
+" don't check on buffer save
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {'mode': 'passive'}
+
 " syntastic suppress messages
-let g:syntastic_quiet_messages = { 'regex': ['missing-docstring'] }
+let g:syntastic_quiet_messages = { 'regex': [ 
+                                        \ "Unable to import \'django*",
+                                        \]}
 
 " =======
 " GARBAGE 
