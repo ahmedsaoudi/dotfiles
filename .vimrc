@@ -159,10 +159,13 @@ nmap <leader>h :bp<CR>
 " closes current buffer and opens previous one
 nmap <leader>q :bp <BAR> bd #<CR>
 
+" formats HTML code
+nmap <F7> gg=G<C-o><C-o>
+
 " --( python specific )------
 
 map <F9> :Black<CR>
-map <F8> :SyntasticCheck<CR>
+map <F8> <ESC>:SyntasticCheck <ENTER>:lopen<C-j>
 
 " Toggle NERDTree tabs 
 " nmap <leader>t :NERDTreeTabsToggle<CR>
@@ -247,6 +250,10 @@ let g:syntastic_mode_map = {'mode': 'passive'}
 " syntastic suppress messages
 let g:syntastic_quiet_messages = { 'regex': [ 
                                         \ "Unable to import \'django*",
+                                        \ "No name 'parse' in module 'urllib'",
+                                        \ "Unable to import 'urllib.parse'",
+                                        \ "Unable to import 'chouf.models'",
+                                        \ "No name 'models' in module 'chouf'",
                                         \]}
 
 " =======
