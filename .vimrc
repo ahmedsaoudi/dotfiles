@@ -160,17 +160,17 @@ nmap <leader>h :bp<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
 
 " formats HTML code
-nmap <F7> gg=G<C-o><C-o>
+nmap <F7> <ESC>:w<ENTER>gg=G<C-o><C-o>zz
 
 " --( python specific )------
 
-map <F9> :Black<CR>
-map <F8> <ESC>:SyntasticCheck <ENTER>:lopen<C-j>
+map <F9> <ESC>:w<ENTER>:Black<CR>
+map <F8> <ESC>:w<ENTER>:SyntasticCheck <ENTER>:lopen<C-j>
 
 " Toggle NERDTree tabs 
 " nmap <leader>t :NERDTreeTabsToggle<CR>
 
-" --( youceompleteme )---
+" --( youceompleteme )B---
 
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>k :YcmCompleter GoTo<CR>
