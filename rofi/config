@@ -4,4 +4,4 @@ rofi.font:          hack 10
 rofi.modi:          combi
 rofi.show-icons:    true
 rofi.location:      2
-rofi.matching:       fuzzy
+rofi.matching:      fuzzy
