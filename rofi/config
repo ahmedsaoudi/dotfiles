@@ -5,3 +5,5 @@ rofi.modi:          combi
 rofi.show-icons:    true
 rofi.location:      2
 rofi.matching:      fuzzy
+rofi.sort:          true
+rofi.sort-method:   fzf

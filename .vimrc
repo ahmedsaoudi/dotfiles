@@ -74,6 +74,9 @@ let mapleader = ","
 
 " Set color scheme to 'VICE'
 colorscheme iceberg
+" for some reason the maker of this theme decided to make light version the default one.
+" this is here to fix that.
+set bg=dark 
 
 " 256 colors terminals
 set t_Co=256
