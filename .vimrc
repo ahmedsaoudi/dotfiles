@@ -1,46 +1,54 @@
 set nocompatible 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()
+" used by vundle
+" to re-enable vundle, uncomment bellow
+" and replace Plug by Plugin in the list
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+" Plugin 'VundleVim/Vundle.vim'
+" v--- this needs to be moved at the end of the
+" list of plugins below
+" call vundle#end()
+
+call plug#begin('~/.vim/plugged')
 
 " ===============
 " LIST OF PLUGINS
 " ===============
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " handles (), {} and the likes
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " handles html tags
-Plugin 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag'
  
 " surrounds text with '' and the likes
 " using shortcuts
-Plugin 'tpope/vim-surround'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'psf/black'
-Plugin 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-surround'
+Plug 'vim-syntastic/syntastic'
+Plug 'psf/black'
+Plug 'Valloric/YouCompleteMe'
  
 " shows indentation levels
 " (the vertical lines on the 
 " left of the screen)
-Plugin 'yggdroot/indentline'
-Plugin 'tpope/vim-obsession'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'lepture/vim-jinja'
+Plug 'yggdroot/indentline'
+Plug 'tpope/vim-obsession'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'lepture/vim-jinja'
 
 " needed to show git branch on airline
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " THEMES
 " ------
-Plugin 'cocopon/iceberg.vim'
-Plugin 'bcicen/vim-vice'
+Plug 'cocopon/iceberg.vim'
+Plug 'bcicen/vim-vice'
 
 " PLUGINS I NO LONGER NEED
 " ========================
@@ -50,9 +58,8 @@ Plugin 'bcicen/vim-vice'
 " Plugin 'edsono/vim-matchit' (no longer available)
 " Plugin 'vim-pandoc/vim-pandoc'
 " Plugin 'jistr/vim-nerdtree-tabs'
-" Plugin 'Valloric/YouCompleteMe'
 
-call vundle#end()
+call plug#end()
 
 " ================
 " GENERAL SETTINGS 
@@ -74,6 +81,9 @@ let mapleader = ","
 
 " Set color scheme to 'VICE'
 colorscheme iceberg
+" for some reason the maker of this theme decided to make light version the default one.
+" this is here to fix that.
+set bg=dark 
 
 " 256 colors terminals
 set t_Co=256
