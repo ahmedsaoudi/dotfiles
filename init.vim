@@ -171,7 +171,13 @@ nmap ,, <C-y>,
 " -------
 " 
 " adds '$' symbole whenever obsession is active
-let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', '''')}', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
+let g:airline_section_z = airline#section#create([
+  \ '%{ObsessionStatus(''$'', '''')}', 
+  \ 'windowswap',
+  \ '%3p%% ', 
+  \ 'linenr', 
+  \ ':%v '
+  \])
 
 " So that airline symbols are correctly displayed
 let g:airline_powerline_fonts=1
@@ -180,6 +186,8 @@ let g:airline#extensions#branch#enabled=1
 
 " Show the current file full path
 let g:airline_section_c = '%f'
+" hides the encoding section
+let g:airline_section_y = ''
 let g:airline_theme = 'dark'
 
 " Added this because airline doesn't show up
@@ -213,8 +221,9 @@ let g:neomake_open_list = 2
 " -------
 
 " Always start CtrlP in Mixed (buffer + file) mode
-let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_by_filename = 1
+let g:ctrlp_custom_ignore = 'static_files'
 
 " To add a background for the CtrlP result prompt
 " hi cursorline cterm=none ctermbg=99 ctermfg=black 
