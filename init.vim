@@ -47,13 +47,15 @@ filetype plugin indent on
 set ignorecase
 set smartcase
 
-set cursorline
 
 " let maplocalleader = ","
 let mapleader = ","
 
 " Set color scheme to 'VICE'
 colorscheme angr
+
+set cursorline
+hi cursorline ctermbg=233
 
 " 256 colors terminals
 set t_Co=256
