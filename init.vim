@@ -88,6 +88,9 @@ let &termencoding=&encoding
 set encoding=utf-8
 set termencoding=utf-8
 
+" make w and other commands stop at '-'
+set iskeyword-=_ 
+
 " Show the ruler
 set ruler
 
