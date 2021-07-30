@@ -35,7 +35,7 @@ sudo ln -s ~/dotfiles/.pylintrc ~/.pylintc
 
 # install & configure neovim
 ## set default config file for nvim
-sudo ln -s ~/dotfile/init.vim ~/.config/nvim/init.vim
+sudo ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
 
 ## install vim-plug for nvim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim \
