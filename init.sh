@@ -24,6 +24,7 @@ sudo apt-get -y install \
   fsearch-trunk \
   pylint \
   htop \
+  nodejs \ # used by many tools (do NOT install via snap)
   gnome-sushi # macos style quick look feature for files
 
 # sets some sensible bash defaults

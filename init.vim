@@ -15,7 +15,7 @@ Plug 'alvan/vim-closetag'
 " using shortcuts
 Plug 'tpope/vim-surround'
 " Plug 'vim-syntastic/syntastic'
-Plug 'psf/black'
+Plug 'psf/black', {'tag': '10.10b0'}
 " Plug 'Valloric/YouCompleteMe'
 
 Plug 'mattn/emmet-vim', {'for': ['html', 'css']}
