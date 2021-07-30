@@ -23,7 +23,8 @@ sudo apt-get -y install \
   ubuntu-restricted-extras \
   fsearch-trunk \
   pylint \
-  htop
+  htop \
+  gnome-sushi # macos style quick look feature for files
 
 # sets some sensible bash defaults
 sudo ln -s ~/dotfiles/.bash_profile ~/.bash_profile
