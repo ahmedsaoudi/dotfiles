@@ -56,6 +56,8 @@ mkdir ~/.config/rofi
 ln -s ~/dotfiles/rofi/config ~/.config/rofi/config
 
 # install tunisian keyboard
+mkdir ~/dotfiles/tn
+git clone https://github.com/ahmedsaoudi/klavietn ~/dotfiles/tn
 sudo ln -s ~/dotfiles/tn/tn /usr/share/X11/xkb/symbols/tn
 
 # install docker
