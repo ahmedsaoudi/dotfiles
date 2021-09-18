@@ -1,3 +1,8 @@
+# to get this file, open terminal, 
+# install git (sudo apt install git)
+# git clone https://github.com/ahmedsaoudi/dotfiles
+# to run the script: . dotfiles/init.sh
+
 # add APPs
 sudo add-apt-repository -yn ppa:christian-boxdoerfer/fsearch-daily
 
@@ -19,7 +24,7 @@ sudo apt-get -y install \
   build-essential \
   cmake \
   fonts-hack \
-  arc-theme \
+  # arc-theme \ no longer needed with modern ubuntu
   ubuntu-restricted-extras \
   fsearch-trunk \
   pylint \
