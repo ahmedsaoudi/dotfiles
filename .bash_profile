@@ -23,6 +23,8 @@ RESET='\[\033[0m\]'
 
 # 2. Source the official Git prompt script (if it exists on your system)
 # On Ubuntu, it's usually at /usr/share/git/git-prompt.sh
+# To get the path for the script, use `dpkg -L git | grep prompt` and 
+# select the path without the "sh" in it.
 if [ -f /etc/bash_completion.d/git-prompt ]; then
     . /etc/bash_completion.d/git-prompt
     
