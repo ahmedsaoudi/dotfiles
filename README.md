@@ -30,7 +30,18 @@ sudo ln -s ~/dotfiles/rofi/config ~/.config/rofi/config
 ```
 
 ## bash_profile
+
 This sets some basic bash profile settings:
 ```bash
 sudo ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+```
+
+In order for the changes to be applied, the `.bash_profile` file must be 
+sourced in the main `.bashrc` file by adding this at the end: 
+
+```bash
+# At the top or near the top of ~/.bashrc:
+if [ -f "$HOME/.bash_profile" ]; then
+    . "$HOME/.bash_profile"
+fi
 ```
