@@ -41,3 +41,5 @@ fi
 # The color codes are wrapped in \[ \] so Bash calculates prompt length correctly.
 export PS1="${GREEN}\u${RESET}:${BLUE}\W${RESET}\$(__git_ps1 ' ${YELLOW}(%s)${RESET}')\$ "
 
+export PATH="$HOME/.local/bin:$PATH"
+
