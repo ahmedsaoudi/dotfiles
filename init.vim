@@ -30,6 +30,8 @@ autocmd ColorScheme iceberg highlight IndentGuidesEven ctermbg=232
 " CtrlP settings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_extensions = ['buffer', 'mru']
+let g:ctrlp_show_prompt = 1
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_switch_buffer = 'et'
@@ -138,7 +140,7 @@ require('lualine').setup {
     component_separators = { left = '|', right = '|'},
     section_separators = { left = ' ', right = ' '},
     disabled_filetypes = {
-      statusline = {},
+      statusline = {'ctrlp'},
       winbar = {},
     },
     ignore_focus = {},
