@@ -76,6 +76,9 @@ filetype plugin indent on
 
 set updatetime=100
 
+set autoread
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * GitGutterAll
+
 " =============================================================================
 " # Key Mappings
 " =============================================================================
