@@ -24,8 +24,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " Set indent guides colors for the iceberg theme
 let g:indent_guides_color_change_percent = 3
-autocmd ColorScheme iceberg highlight IndentGuidesOdd  ctermbg=236
-autocmd ColorScheme iceberg highlight IndentGuidesEven ctermbg=235
+autocmd ColorScheme iceberg highlight IndentGuidesOdd  ctermbg=233
+autocmd ColorScheme iceberg highlight IndentGuidesEven ctermbg=232
 
 " CtrlP settings
 let g:ctrlp_map = '<c-p>'
@@ -121,7 +121,10 @@ nnoremap <silent> <F2> :nohls<CR>
 " # Theme
 " =============================================================================
 colorscheme iceberg
-set background=dark
+
+" Set a truly black background
+highlight Normal ctermbg=NONE guibg=black
+highlight NonText ctermbg=NONE guibg=black
 
 " =============================================================================
 " # Lualine
