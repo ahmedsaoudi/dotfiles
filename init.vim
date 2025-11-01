@@ -74,6 +74,8 @@ set cursorline
 " Enable file type detection, plugins, and indenting
 filetype plugin indent on
 
+set updatetime=100
+
 " =============================================================================
 " # Key Mappings
 " =============================================================================
