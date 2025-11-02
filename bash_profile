@@ -1,4 +1,4 @@
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # set the terminal prompt to:
