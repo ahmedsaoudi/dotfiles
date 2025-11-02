@@ -43,3 +43,10 @@ export PS1="${GREEN}\u${RESET}:${BLUE}\W${RESET}\$(__git_ps1 ' ${YELLOW}(%s)${RE
 
 export PATH="$HOME/.local/bin:$PATH"
 
+# Set vi mode
+set -o vi
+
+# Change cursor shape for vi mode
+bind 'set show-mode-in-prompt on'
+bind 'set vi-ins-mode-string \1\e[6 q\2'
+bind 'set vi-cmd-mode-string \1\e[2 q\2'
