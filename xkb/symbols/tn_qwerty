@@ -1,9 +1,9 @@
-// Keyboard layouts for the United States of America.
+// Keyboard layouts for Tunisian.
 
 default partial alphanumeric_keys modifier_keys
-xkb_symbols "custom_us" {
+xkb_symbols "tn_qwerty" {
 
-    name[Group1]= "custom_us";
+    name[Group1]= "tn_qwerty";
 
     key <TLDE>	{[   grave,	 asciitilde	]};
     key <AE01>	{[     exclam,      1           ]};
@@ -21,7 +21,7 @@ xkb_symbols "custom_us" {
 
     key <AD01>	{[	 q,	 Q		]};
     key <AD02>	{[	 w,	 W		]};
-    key <AD03>	{[	 e,	 E		]};
+    key <AD03>	{[	 e,	 E, U03B5,  U0190 ]};
     key <AD04>	{[	 r,	 R		]};
     key <AD05>	{[	 t,	 T		]};
     key <AD06>	{[	 y,	 Y		]};
@@ -37,7 +37,7 @@ xkb_symbols "custom_us" {
     key <AC03>	{[	 d,	 D		]};
     key <AC04>	{[	 f,	 F		]};
     key <AC05>	{[	 g,	 G		]};
-    key <AC06>	{[	 h,	 H		]};
+    key <AC06>	{[	 h,	 H, U0127,  U0126 ]};
     key <AC07>	{[	 j,	 J		]};
     key <AC08>	{[	 k,	 K		]};
     key <AC09>	{[	 l,	 L		]};
@@ -55,4 +55,6 @@ xkb_symbols "custom_us" {
     key <AB08>	{[   comma,	 less		]};
     key <AB09>	{[  period,	 greater	]};
     key <AB10>	{[   slash,	 question	]};
+
+    include "level3(ralt_switch)"
 };
