@@ -1,9 +1,7 @@
 // Keyboard layouts for Tunisian.
 
-default partial alphanumeric_keys modifier_keys
-xkb_symbols "qwerty" {
-
-    name[Group1]="Tunisian (QWERTY)";
+partial alphanumeric_keys modifier_keys
+xkb_symbols "base" {
 
     key <TLDE> { [     grave,    asciitilde ] };
     key <AE01> { [        exclam,         1 ] };
@@ -59,9 +57,15 @@ xkb_symbols "qwerty" {
     include "level3(ralt_switch)"
 };
 
-partial alphanumeric_keys
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "qwerty" {
+    include "tn(base)"
+    name[Group1]="Tunisian (QWERTY)";
+};
+
+partial alphanumeric_keys modifier_keys
 xkb_symbols "azerty" {
-    include "qwerty"
+    include "tn(base)"
     name[Group1]="Tunisian (AZERTY)";
 
     key <TLDE> { [   twosuperior,    asciitilde ] };
