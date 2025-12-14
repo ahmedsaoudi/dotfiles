@@ -118,17 +118,18 @@ xkb_symbols "azerty" {
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┛
 
     key <TLDE> { [   twosuperior,    asciitilde ] };
-    key <AE01> { [     ampersand,             1 ] };
-    key <AE02> { [        eacute,             2 ] };
-    key <AE03> { [      quotedbl,             3 ] };
-    key <AE04> { [    apostrophe,             4 ] };
-    key <AE05> { [     parenleft,             5 ] };
-    key <AE06> { [         minus,             6 ] };
-    key <AE07> { [        egrave,             7 ] };
-    key <AE08> { [    underscore,             8 ] };
-    key <AE09> { [      ccedilla,             9 ] };
-    key <AE10> { [        agrave,             0 ] };
-    key <AE11> { [    parenright,        degree ] };
+    key <AE01> { [     ampersand,             1,   U2014,      onesuperior ] };
+    key <AE02> { [        eacute,             2,   asciitilde,   twosuperior ] };
+    key <AE03> { [      quotedbl,             3,   numbersign, threesuperior ] };
+    key <AE04> { [    apostrophe,             4,   braceleft,    voidsymbol ] };
+    key <AE05> { [     parenleft,             5,   bracketleft,  voidsymbol ] };
+    key <AE06> { [         minus,             6,   bar,          voidsymbol ] };
+    key <AE07> { [        egrave,             7,   grave,        voidsymbol ] };
+    key <AE08> { [    underscore,             8,   backslash,    voidsymbol ] };
+    key <AE09> { [      ccedilla,             9,   asciicircum,  voidsymbol ] };
+    key <AE10> { [        agrave,             0,   at,           voidsymbol ] };
+    key <AE11> { [    parenright,        degree,   bracketright, voidsymbol ] };
+    key <AE12> { [         equal,          plus,   braceright,   plusminus ] };
 
     key <AD01> { [             a,             A ] };
     key <AD02> { [             z,             Z ] };
