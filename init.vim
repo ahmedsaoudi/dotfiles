@@ -149,6 +149,16 @@ require('lualine').setup {
 }
 
 -- 2. Setup LSP and Code Completion safely
+-- Passing custom configuration settings to the ruff LSP client
+vim.lsp.config('ruff', {
+    init_options = {
+        settings = {
+            configuration = "~/.config/ruff/ruff.toml"
+        }
+    }
+})
+
+
 vim.lsp.enable('ruff')
 vim.lsp.codelens.enable()
 vim.lsp.inlay_hint.enable()

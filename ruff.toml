@@ -1,0 +1,27 @@
+# this should be located at ~/.config/ruff/ruff.toml
+# with a lsp config pointer here because this is not
+# the default config file (pyproject.toml is)
+
+# Set the strict 80-character line limit requested
+line-length = 80
+target-version = "py311"
+
+[lint]
+# Enable essential rules: Pyflakes (F), pycodestyle (E, W), 
+# isort (I), and pydocstyle/docstrings (D)
+select = ["F", "E", "W", "I", "D"]
+
+# Ignore minor spacing conflicts that conflicts with formatters
+ignore = ["E203", "D203", "D212"]
+
+# Force these rules
+extend-select = ["D213"]
+
+[lint.pydocstyle]
+# Use standard convention for docstring checks
+convention = "google"
+
+[format]
+# Automatically wrap code docstrings to line-length where possible
+docstring-code-format = true
+
